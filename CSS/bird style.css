@@ -1,0 +1,138 @@
+/* style.css */
+
+/* 
+
+  CSS     +      CSS
+    | @import url |
+    ㄴ style.css--|
+          |
+         HTML
+
+서체도 style.css에 추가 가능 ex) 웹폰트(패밀리)
+*/
+@import url("./reset.css");
+/* reset.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+/* 웹폰트 */
+
+/* style 변수(:root) */
+:root {
+  --main-color: #2d98da;
+}
+
+
+
+body {
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+
+/*--------------------------------------------*/
+
+
+#main-header {
+  background-color: var(--main-color);
+  color: azure;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#main-header .title {
+  /*outline: 1px solid #000;*/
+  padding: 10px;
+}
+
+#main-header .title h1 {
+  font-weight: normal;
+  font-size: 26px;
+}
+
+#main-header #gnb ul {
+  display: flex;
+  overflow: hidden;
+}
+
+#main-header #gnb ul li {
+  /* 1은 (n)*1:(n)1:(n)1 같은 비율(= flex item -> 부모에 flex 걸고 해야 한다.):: flex 비율로 크기 잡음.
+  (n)*은 현재 스타일 기준 "<li><a href="./index.html">강아지</a></li>"
+  인라인 요소다. */
+  flex: 1;
+}
+
+#main-header #gnb ul li a {
+  /*background: #35a3e7;*/
+  display: block;
+  /* 블록 걸어야 늘어난다. */
+  padding: 10px;
+  color: azure;
+}
+
+#main-header #gnb ul li.on>a {
+  border-bottom: 3px solid #fff;
+}
+
+
+/*--------------------------------------------*/
+
+/* #contents 영역 크기 */
+#contents {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#contents h2 {
+  margin-bottom: 20px;
+}
+
+
+/* flex 컨테이너 */
+#contents .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* flex items */
+/* col 공간을 화면에 맞게 크기를 준다.  => 현재 연습용은 아이폰 SE버전 기준 + 400x400 이미지 기준*/
+#contents .row .col {
+  position: relative;
+  overflow: hidden;
+  /* 20px gap 추가한 부분 보정값으로 뺌 */
+  width: calc(50% - 10px);
+  height: 144px;
+  /*outline: 2px solid coral;*/
+}
+
+/* 이미지 크기는 무조건 100% */
+#contents .row .col img {
+  width: 100%;
+  /* cliping 처리 */
+  object-fit: cover;
+}
+
+#contents .row .col .name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: azure;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  font-size: 14px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
