@@ -1,5 +1,7 @@
 # 2022.07.01 Animal-Information (동물정보 페이지)
 <br>
+https://asben1.github.io/2022.07.01_Animal-Information/
+<br>
 1. 메인, 거브 페이지 구성<br>
 2. 모바일 웹 메뉴 구현<br>
 3. 이미지요소 + 텍스트 정보의 동물 썸네일 구성<br>
