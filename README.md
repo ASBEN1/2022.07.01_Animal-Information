@@ -11,6 +11,6 @@
 5. 카테고리 별로 동물 표시(카테고리 필터링)
     - location.search로 페이지별 요청 파마리터(query) 확인
     - new URLSearchParams(search param).get(key)
-6. 기본 페이지를 dog로 설정 
-if(params == null){params = 'dog'}; <- 원래 아무것도 없으면 null로 표시되기 때문에
+6. 기본 페이지를 dog로 설정<br>
+if(params == null){params = 'dog'}; <- 원래 아무것도 없으면 null로 표시되기 때문에<br>
 if문으로 dog 페이지가 첫번째 페이지로 가게 만든다.
