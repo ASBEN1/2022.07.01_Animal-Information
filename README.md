@@ -11,5 +11,5 @@
 5. 카테고리 별로 동물 표시(카테고리 필터링)
     - location.search로 페이지별 요청 파마리터(query) 확인
     - new URLSearchParams(search param).get(key)
-    - 시작페이지가 null(없음)이면 if문을 추가해 시작페이지를 'dog'로 추가한다.
+6. 시작페이지가 null(없음)이면 if문을 추가해 시작페이지를 'dog'로 추가한다.<br>
     (기본값 = params = dog)
